@@ -36,7 +36,7 @@
 
 </head>
 <body>
-<%@include file="../new_product_menu.jsp"%>
+<%-- <%@include file="../new_product_menu.jsp"%> --%>
 <%-- <%@ include file="adminHome.jsp" %> --%>
 	<div class="container">
 		<form:form class="well form-horizontal" modelAttribute="user" action="${pageContext.request.contextPath}/user/update/" method="post" id="contact_form">
@@ -195,7 +195,7 @@
 	</div>	
 	
 	<br><br>
-	<%@ include file="../footer.jsp" %>
+	
 </body>
 
 </html>

@@ -44,10 +44,12 @@
 			})
 		})
 	</script>
+	
+	<%@ include file="new_product_menu.jsp" %>
 	<div class="container">
 		
-		<%@ include file="loginHeader.jsp" %>
-		<%@ include file="new_product_menu.jsp" %>
+		<%-- <%@ include file="loginHeader.jsp" %> --%>
+		
 	
 		<div class="row">
 			<div class="col-xs-4 item-photo">
@@ -60,9 +62,6 @@
 
 				<h4>Price - ${product.price} Rs.</h4>
 				<h5>Supplier - ${product.supplier.supplier_name}</h5>
-
-
-
 				<div class="section" style="padding-bottom: 20px;">
 
 					<form action="${pageContext.request.contextPath}/addToCart"

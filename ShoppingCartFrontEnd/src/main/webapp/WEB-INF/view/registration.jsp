@@ -39,7 +39,7 @@ sup
 <body>
 
 
-	<%-- <%@include file="new_product_menu.jsp"%> --%>
+	<%@include file="new_product_menu.jsp"%>
 	 <div>
 	<div class="container">
 		<form:form class="well form-horizontal" modelAttribute="user" action="${pageContext.request.contextPath}/saveRegister" method="post" id="contact_form">

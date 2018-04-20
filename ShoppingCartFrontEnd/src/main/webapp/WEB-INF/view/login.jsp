@@ -7,13 +7,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>login page</title>
-
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 
 <style type="text/css">
 body {
@@ -22,7 +21,7 @@ body {
 
 .jumbotron {
 	height: 100%;
-	background-color: tomato !important;
+	background-color: ;
 }
 
 .form-group {
@@ -56,23 +55,13 @@ function passFunction()
 
 </head>
 <body>
-<%-- <%@ include file="loginHeader.jsp" %> --%>
-<%-- <%@ include file="new_product_menu.jsp" %> --%>
-<%@ include file="new_product_menu.jsp" %>
-
-<%-- <%@ include file="admin/adminHome.jsp" %> --%>
-	<br> ${message}
-	<%-- <c:url var="action" value="/loginHeader"></c:url>
-	 <c:url var="action" value="/validate"></c:url> --%>
-	 
+	<jsp:include page="new_product_menu.jsp"></jsp:include>
+	<br> ${message}	 
+	<div class="container">
 	<form name='loginForm' action='<c:url value="/login"></c:url>' method='POST'>	
 		<div class="jumbotron">
 			<div class="container">
 				<br>
-				<h1 class="form-group">
-					<b>Login form</b>
-				</h1>
-
 				<div class="form-group">
 					<label for="email">Email:</label> <input type="email" id="Email"
 						name="username" class="form-control" placeholder="Enter your Email"
@@ -89,18 +78,19 @@ function passFunction()
 				</div>
 				<div class="form-group">
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                <button class="btn btn-lg btn-primary" type="submit">Login</button>				</div>
+                <button class="btn btn-lg btn-primary" type="submit">Login</button>
+                <button style="text-align:right;"  class="btn btn-lg btn-primary" type="reset">Cancel</button>                
+                </div>
 				<div class="form-group">
 					<h4>
 						<bold> If you have no account then <a href="register">
 							Click me</a></bold>
 					</h4>
 				</div>
-
 			</div>
-		</div>
-		
+		</div>	
 	</form> 
+	</div>
 	<%@ include file="footer.jsp" %>
 </body>
 </html>

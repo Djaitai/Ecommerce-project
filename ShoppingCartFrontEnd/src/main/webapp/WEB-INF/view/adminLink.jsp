@@ -5,11 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<style type="text/css">
+#astyle a: hover {
+	color :fuchsia;
+}
+#astyle
+{
+
+}
+</style>
+
 </head>
 <body>
 	<center>
-
-		<h2>
+		<h3>
 			<a href="${pageContext.request.contextPath}/admin/manageCategories">
 				Manage Categories</a> <a
 				href="${pageContext.request.contextPath}/admin/manageSuppliers">
@@ -18,9 +28,7 @@
 				Manage Products</a> <a
 				href="${pageContext.request.contextPath}/admin/manageUsers">
 				Manage Users</a>
-		</h2>
-
-
+		</h3>
 	</center>
 
 

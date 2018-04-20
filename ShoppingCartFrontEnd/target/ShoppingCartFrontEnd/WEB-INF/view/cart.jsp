@@ -22,24 +22,9 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 </head>
 <body>
-	<%-- <a href="buy"> Buy product</a>
-	<br>
-
-	<c:forEach var="cart" items="${cartList}">
-
-		<img alt="" src=" ${ImagesFolder}${cart.productID}.PNG">
-
-		<img alt="No image" src="resources/images/${cart.product_Id}.PNG">
-
-Name  : <input type="text" name="price" value="${cart.product_name}">
-		<br>
-
-price : <input type="text" name="price" value="${cart.price}">
-		<br>
-
-quantity  : <input type="text" name="price" value="${cart.quantity}">
-		<br>
-	</c:forEach> --%>
+	
+	<%@ include file="loginHeader.jsp" %>
+	<%@ include file="new_product_menu.jsp" %>
 
 	<div class="container">
 

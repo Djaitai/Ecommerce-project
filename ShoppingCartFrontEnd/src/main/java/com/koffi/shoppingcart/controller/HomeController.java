@@ -34,6 +34,7 @@ public class HomeController {
 	@RequestMapping("/login")
 	public ModelAndView login() {
 		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("categories", categoryDAO.list());
 		modelAndView.setViewName("login");
 		return modelAndView;
 	}

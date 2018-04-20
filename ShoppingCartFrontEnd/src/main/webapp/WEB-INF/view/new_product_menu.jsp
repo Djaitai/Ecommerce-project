@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>menu</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -79,6 +79,10 @@ body {
 	color: #333;
 	border: 1px solid #ddd;
 }
+
+#hoverColor a:hover {
+	color: red;
+}
 </style>
 
 <script type="text/javascript">
@@ -100,9 +104,9 @@ body {
 </head>
 <body>
 
-	<div class="">
+	<div style="background-color: #ffcccc;">
 		<!-- <div class="container"> -->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar">
 		<div class="navbar-header">
 			<button class="navbar-toggle" type="button" data-toggle="collapse"
 				data-target=".js-navbar-collapse">
@@ -110,13 +114,14 @@ body {
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${pageContext.request.contextPath}/home">My Store</a>
+			<a style="color: #000000;"  class="navbar-brand"
+				href="${pageContext.request.contextPath}/home">My Store</a>
 		</div>
 		<div class="collapse navbar-collapse js-navbar-collapse">
 			<ul class="nav navbar-nav">
 				<c:forEach items="${categories}" var="category">
 
-					<li class="dropdown mega-dropdown"><a
+					<li class="dropdown mega-dropdown"><a style="color: #000000;"
 						href="${pageContext.request.contextPath}/productCustList/${category.category_Id}"
 						class="dropdown-toggle">${category.category_name}<span
 							class="caret"></span></a>
@@ -138,9 +143,9 @@ body {
 				<c:if test="${pageContext.request.userPrincipal.name!=null}">
 					<li class="dropdown"><h4 style="color: #ffffff">${pageContext.request.userPrincipal.name}</h4></li>
 				</c:if>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-expanded="false">My
-						account <span class="caret"></span>
+				<li class="dropdown"><a style="color: #000000;" href="#"
+					class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-expanded="false">My account <span class="caret"></span>
 				</a>
 					<ul class="dropdown-menu" role="menu">
 						<c:if test="${pageContext.request.userPrincipal.name== null}">
@@ -173,14 +178,17 @@ body {
 						cart (0) items</a> 
 				</li> --%>
 				<form class="navbar-form navbar-left" action="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="searchString">
-        </div>
-        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-      </form>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search"
+							name="searchString">
+					</div>
+					<button class="btn btn-default" type="submit">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</form>
 			</ul>
 		</div>
-		
+
 		<!-- /.nav-collapse --> </nav>
 	</div>
 	<hr color="blue" width="100">

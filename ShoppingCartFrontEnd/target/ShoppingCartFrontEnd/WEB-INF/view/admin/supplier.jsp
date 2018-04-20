@@ -35,7 +35,7 @@
 
 </head>
 <body>
-<%@include file="../new_product_menu.jsp"%>
+<%-- <%@include file="../new_product_menu.jsp"%> --%>
 	<div class="container">
 		${SupplierSuccessMessage} ${SupplierErrorMessage}
 		<form class="well form-horizontal" action="${pageContext.request.contextPath}/supplier/save" method="POST" id="form">
@@ -154,6 +154,6 @@
 			</table>
 		</div>
 	
-	<%@ include file="../footer.jsp" %>
+	<%-- <%@ include file="../footer.jsp" %> --%>
 </body>
 </html>

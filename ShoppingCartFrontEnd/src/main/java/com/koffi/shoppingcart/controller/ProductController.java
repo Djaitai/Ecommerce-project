@@ -193,11 +193,11 @@ public class ProductController {
 	@RequestMapping("search")
 	public ModelAndView searchProduct(@RequestParam("searchString") String searchString)
 	{
-		ModelAndView mv = new ModelAndView("home");
+		ModelAndView modelAndView = new ModelAndView("home");
 		List<Product> products =  productDAO.search(searchString);
-		mv.addObject("products", products);
-		mv.addObject("isUserSelectedProduct", true);
+		modelAndView.addObject("products", products);
+		modelAndView.addObject("isUserSelectedProduct", true);
 		//log.info("Number of products with search string " +searchString +  " is/are : " + products.size());
-		return mv;		
+		return modelAndView;		
 	}
 }

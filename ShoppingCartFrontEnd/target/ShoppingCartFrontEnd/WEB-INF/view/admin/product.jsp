@@ -36,7 +36,7 @@
 </head>
 <body>
 
-<%@include file="../new_product_menu.jsp"%>
+<%-- <%@include file="../new_product_menu.jsp"%> --%>
 
 <hr size="5" color=" blue">
 	<div class="container">

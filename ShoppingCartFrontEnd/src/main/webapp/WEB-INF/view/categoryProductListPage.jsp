@@ -13,20 +13,39 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+<style type="text/css">
+	#images
+	{
+		width: 300px;
+		height: 200px;
+		border: none;
+	}
+	#price
+	{
+		color: red;
+	}
+	#detail
+	{
+		color: #000099;
+	}
+</style>
 </head>
 <body>
 	<%@ include file="new_product_menu.jsp"%>
 	<div class=container>
 		<div class="container">
+		
 			<div class="row mar-bot-30">
 				<div class="col-md-12">
 					<div class="product-sec-tittle">
-						<h2 class="section-heading">
+						<h2 style="text-align: center;" class="section-heading">
 							<span>Feature</span> Product
 						</h2>
-					</div>
+					</div> 
 				</div>
 			</div>
+			
 			<div class="row">
 				<c:if test="${empty custProducts}">
 					<center>
@@ -35,21 +54,19 @@
 				</c:if>
 				<c:forEach items="${custProducts}" var="p">
 					<div class="featured-product">
-						<div class="col-md-3">
+						<div class="col-md-4" style="border-style: none;">
 
-							<div class="product-box hover-circle text-center">
+							<div class="product-box hover-circle text-center" style="box-shadow: none">
 
-								<div class="product-item">
+								<div class="product-item" style="border-style: none;">
 									<figure>
-										<img src="../resources/image/${p.image_name}" width="230"
-											alt="product" />
+										<img id="images" src="../resources/image/${p.image_name}"  alt="product" />
 									</figure>
 									<p class="product-drisc">${p.product_description}</p>
 
-									<h4 class="product-price">Price :${p.price}</h4>
+									<h4 id="price" class="product-price">Price :${p.price}</h4>
 
-									<a
-										href="${pageContext.request.contextPath}/productDescription/${p.product_Id}"
+									<a id="detail" href="${pageContext.request.contextPath}/productDescription/${p.product_Id}"
 										class="btn btn-default buy-now">View details</a>
 
 								</div>

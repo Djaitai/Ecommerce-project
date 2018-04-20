@@ -44,9 +44,6 @@ img
 
 </head>
 <body>
-
-
-	<%@include file="../new_product_menu.jsp"%> <div>
 	<div class="container">
 		<form class="well form-horizontal" action="${pageContext.request.contextPath}/admin/category/save" method="post" id="contact_form">
 			<fieldset>

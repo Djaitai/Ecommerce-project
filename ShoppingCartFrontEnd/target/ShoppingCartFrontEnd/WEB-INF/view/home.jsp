@@ -19,11 +19,13 @@
 
 	<br>
 
-	<jsp:include page="loginHeader.jsp"></jsp:include>
+	<%-- <jsp:include page="loginHeader.jsp"></jsp:include> --%>
 
 	<hr color="blue" size="5">
  
 	<jsp:include page="new_product_menu.jsp"></jsp:include>
+	
+	<%@ include file="adminLink.jsp" %>
 
 	<c:if test="${isUserSelectedProduct==true}">
 

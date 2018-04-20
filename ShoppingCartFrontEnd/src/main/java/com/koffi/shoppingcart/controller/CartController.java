@@ -100,11 +100,6 @@ public class CartController {
                cart.setEmailID(userEmail);
 				cartDAO.update(cart);
 			}
-			
-			//Product product = productDao.findbyId(pid);
-
-			// mav.addObject("product", product);
-
 			modelAndView.addObject("cartInfo", cartDAO.findCartById(userEmail));
 
 			//mav.addObject("product", product);

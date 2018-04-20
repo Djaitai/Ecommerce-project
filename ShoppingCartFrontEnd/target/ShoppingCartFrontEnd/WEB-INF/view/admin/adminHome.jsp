@@ -8,15 +8,8 @@
 <title>admin page</title>
 </head>
 <body>
-	<%-- <center>
-		<h2>	
-			<a href="manageCategories"> Manage Categories</a>  
-			<a href="manageSuppliers"> Manage Suppliers</a>
-			<a href="manageProducts"> Manage Products</a> 
-			<a href="manageUsers"> Manage Users</a>
-		</h2>
-	</center> --%>
-	
+
+	<%@include file="../new_product_menu.jsp"%>
 	<center>
 		<h2>	
 			<a href="${pageContext.request.contextPath}/admin/manageCategories"> Manage Categories</a>  
@@ -24,7 +17,7 @@
 			<a href="${pageContext.request.contextPath}/admin/manageProducts"> Manage Products</a>
 			<a href="${pageContext.request.contextPath}/admin/manageUsers"> Manage Users</a>
 		</h2>
-	</center>
+	</center> 
 	<br>
 		<c:if test="${isAdminClickedManageCategories==true }">
 			<jsp:include page="category.jsp"></jsp:include>
@@ -39,5 +32,7 @@
 		<c:if test="${isAdminClickedUsers==true }">
 			<jsp:include page="updateUser.jsp"></jsp:include>
 		</c:if>
+		
+		<%@ include file="../footer.jsp" %> 
 </body>
 </html>

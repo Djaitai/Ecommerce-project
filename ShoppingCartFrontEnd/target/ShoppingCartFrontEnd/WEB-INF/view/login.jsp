@@ -1,4 +1,4 @@
-<%-- <%@taglib prefix="sec" uri=""%> --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -56,14 +56,15 @@ function passFunction()
 
 </head>
 <body>
+<%-- <%@ include file="loginHeader.jsp" %> --%>
+<%-- <%@ include file="new_product_menu.jsp" %> --%>
+<%@ include file="new_product_menu.jsp" %>
 
+<%-- <%@ include file="admin/adminHome.jsp" %> --%>
 	<br> ${message}
 	<%-- <c:url var="action" value="/loginHeader"></c:url>
 	 <c:url var="action" value="/validate"></c:url> --%>
 	 
-	 
-	<%--<form name='loginForm' action="${action}" method="POST">	 --%>
-	<%-- <form name='loginForm' action="<c:url value='/j_spring_security_check' />" method='POST'> --%>
 	<form name='loginForm' action='<c:url value="/login"></c:url>' method='POST'>	
 		<div class="jumbotron">
 			<div class="container">
@@ -87,8 +88,8 @@ function passFunction()
 						Password</label>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Submit" class="btn btn-success">
-				</div>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                <button class="btn btn-lg btn-primary" type="submit">Login</button>				</div>
 				<div class="form-group">
 					<h4>
 						<bold> If you have no account then <a href="register">
@@ -98,9 +99,8 @@ function passFunction()
 
 			</div>
 		</div>
-		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                <button class="btn btn-lg btn-primary" type="submit">Login</button>
+		
 	</form> 
-	
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
