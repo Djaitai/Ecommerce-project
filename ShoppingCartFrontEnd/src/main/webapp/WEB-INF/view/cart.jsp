@@ -22,8 +22,6 @@ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></scri
 
 </head>
 <body>
-	
-	<%@ include file="loginHeader.jsp" %>
 	<%@ include file="new_product_menu.jsp" %>
 
 	<div class="container">

@@ -11,7 +11,6 @@
 <body>
 
 <div class="container">
-  <h2>Modal Example</h2>
   <!-- Trigger the modal with a button -->
   
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"  id="onload">

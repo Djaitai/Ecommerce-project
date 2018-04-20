@@ -38,7 +38,7 @@
 <%-- <%@include file="../new_product_menu.jsp"%> --%>
 	<div class="container">
 		${SupplierSuccessMessage} ${SupplierErrorMessage}
-		<form class="well form-horizontal" action="${pageContext.request.contextPath}/supplier/save" method="POST" id="form">
+		<form class="well form-horizontal" action="${pageContext.request.contextPath}/admin/supplier/save" method="POST" id="form">
 			<fieldset>
 				<legend>
 					<center>

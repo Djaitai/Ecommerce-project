@@ -39,7 +39,7 @@
 <%-- <%@include file="../new_product_menu.jsp"%> --%>
 <%-- <%@ include file="adminHome.jsp" %> --%>
 	<div class="container">
-		<form:form class="well form-horizontal" modelAttribute="user" action="${pageContext.request.contextPath}/user/update/" method="post" id="contact_form">
+		<form:form class="well form-horizontal" modelAttribute="user" action="${pageContext.request.contextPath}/admin/user/update/" method="post" id="contact_form">
 			<fieldset>
 
 				<!-- Form Name -->
